@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Setter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <span>Email:<input type="text" id="loginEmail"> </span>
+        <br>
+        <span>Password: <input type="password" id="loginPassword"> </span>
+        <br>
+        <span>
+            <button id="LOGIN">Login</button>
+            <button class="REGISTER">Register</button>
+        </span>
+    </div>
+
+    <div id="register">
+        <h1>Register</h1>
+        <span>First Name: <input type="text" id="registerFirstName"></span>
+        <br>
+        <span>Last Name: <input type="text" id="registerLastName"></span>
+        <br>
+        <span>Email: <input type="text" id="registerEmail"></span>
+        <br>
+        <span>Password: <input type="password" id="registerPassword"></span>
+        <br>
+        <span>Re-enter Password: <input type="password" id="registerPassword2"></span>
+        <br>
+        <span>
+            <button id="rLOGIN">Register</button>
+            <button onClick = "registering = false; checkPage();" >Go Back</button>
+        </span>
+    </div>
+
+    <div id="home" class="wrapper">
+        <button id ="LOGOUT">LOGOUT</button>
+        <h1>Schedule an Appointment with Me:</h1>
+        <div class="spacing">
+            <span>Appointment Name: <input type="text" id="nam"></span>
+            <span>Description: <input type="text" id="description"></span>
+        </div>
+        <br>
+        <div class="spacing">
+            <span>Date: <input type="date" id="date"></span>
+            <span>Start: <input type="time" name="time" id="start"></span>
+            <span>End: <input type="time" id="end"></span>
+        </div>
+        <br>
+        <button class= "spacing" id="submit">Set Appointment</button>
+        <span id="Invaid" class="hide"><h3>Invaid Time: Please change time and try again</h3></span>
+        <span id ="notAvailable" class="hide"><h3>Not Available At Time: Please look at the schedule and try again</h3></span>
+        <div id="schedule">
+            <h2>Schedule</h2>
+            <ul id="times">
+            </ul>
+        </div>
+    </div>
+
+    <div id="apt" class="wrapper">
+        Appointment Name: <span id="n"></span>
+        <br>
+        Description: <span id="de"></span>
+        <br>
+        Date: <span id="d"></span>
+        <br>
+        Start: <span id="s"></span>
+        <br>
+        End: <span id="e"></span>
+    </div>
+
+<script src="app.js"></script>    
+</body>
+</html>
